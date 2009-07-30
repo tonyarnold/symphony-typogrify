@@ -5,12 +5,12 @@
 		public function about(){
 			return array(
 				'name' => 'Typogrify Text Formatters',
-				'version' => '1.02',
-				'release-date' => '2009-07-20',
+				'version' => '1.1',
+				'release-date' => '2009-07-30',
 				'author' => array('name' => 'Tony Arnold',
 					              'website' => 'http://www.tonyarnold.com', 
 					              'email' => 'tony@tonyarnold.com'),
-				'description' => 'Format entries using Typogrify formatter'
+				'description' => 'Format entries using Typogrify formatter, and edit them using the markItUp! WYSIWYM editor.'
 			);
 		}
 
