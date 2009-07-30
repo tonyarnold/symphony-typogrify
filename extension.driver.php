@@ -7,26 +7,26 @@
 				'name' => 'Typogrify Text Formatters',
 				'version' => '1.1',
 				'release-date' => '2009-07-30',
-				'author' => array('name' => 'Tony Arnold',
-					              'website' => 'http://www.tonyarnold.com', 
-					              'email' => 'tony@tonyarnold.com'),
+				'author' => array('name'		=> 'Tony Arnold',
+													'website'	=> 'http://www.tonyarnold.com', 
+													'email'		=> 'tony@tonyarnold.com'),
 				'description' => 'Format entries using Typogrify formatter, and edit them using the markItUp! WYSIWYM editor.'
 			);
 		}
 
 		public function getSubscribedDelegates(){
 			return array(
-				array('page'        =>	'/backend/',
-				      'delegate'	=>	'ModifyTextareaFieldPublishWidget',
-				      'callback'	=>	'modifyTextarea'),
+				array('page'			=>	'/backend/',
+							'delegate'	=>	'ModifyTextareaFieldPublishWidget',
+							'callback'	=>	'modifyTextarea'),
 				      
-				array('page'		=>	'/backend/',
-					  'delegate'	=>	'ModifyTextboxFieldPublishWidget',
-					  'callback'	=>	'modifyTextarea'),
+				array('page'			=>	'/backend/',
+							'delegate'	=>	'ModifyTextBoxFullFieldPublishWidget',
+							'callback'	=>	'modifyTextarea'),
 			);
 		}
 
-		public function modifyTextarea($context){
+		public function modifyTextarea($context){			
 			if( $context['field']->get('formatter') != 'ta_typogrifymarkdown' &&
 			    $context['field']->get('formatter') != 'ta_typogrifymarkdownextra' &&
 				$context['field']->get('formatter') != 'ta_typogrifytextile' &&
