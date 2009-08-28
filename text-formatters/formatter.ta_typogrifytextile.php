@@ -17,7 +17,7 @@
 
 		function run($string){
 		  if(!function_exists('typogrify')) include_once(EXTENSIONS . '/typogrify/lib/php-typogrify.php');
-		  if(!class_exists('Textile')) include_once(EXTENSIONS . '/textile/lib/textile.php');
+		  if(!class_exists('Textile')) include_once(EXTENSIONS . '/typogrify/lib/textile.php');
 			$textile = new Textile;
 			return stripslashes(typogrify($textile->TextileThis($string)));
 		}
